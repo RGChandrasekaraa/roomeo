@@ -1,10 +1,16 @@
 import './App.css'
+import Navbar from './components/navbar/navbar'
+import './layout.scss'
 
 function App() {
+
   return (
-    <>
-      <h1>Testing</h1>
+    <>  
+      <div className="layout">
+        <Navbar/>
+      </div>
     </>
+  
   )
 }
 
