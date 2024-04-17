@@ -1,0 +1,86 @@
+@import '../../routes/layout/layout.scss';
+.homePage {
+    display: flex;
+    height: 100%;
+
+    .textContainer {
+        flex:3;
+
+        .wrapper {
+            padding-right: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 50px;
+            height: 80%;
+
+            @include md{
+                padding:0;
+            }
+
+            @include sm {
+                justify-content: center;
+            }
+
+            .title {
+                font-size: 64px;
+
+                @include lg {
+                    font-size: 48px;
+                }
+            }
+
+
+            .boxes {
+                display: flex;
+                justify-content: space-between;
+
+                @include sm {
+                    display: none;
+                }
+                
+                h1 {
+                font-size: 32px;
+
+                @include lg {
+                    font-size: 24px;
+                }
+            }
+                h2 {
+                font-size: 24px;
+                font-weight: 400;
+
+                @include lg {
+                    font-size: 18px;
+                }
+            }
+            }
+        }
+    }
+
+    .imgContainer {
+        flex:2;
+        background-color: rgb(255, 255, 255);
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @include md {
+            display: none;
+
+        }
+
+        img {
+        width: 80%;
+        position:absolute;
+        right: 0;
+
+        @include lg {
+            width: 80%;
+        }
+
+
+    }
+    }
+    
+}
