@@ -1,6 +1,6 @@
 import './homePage.scss';
 import homepageBanner from './banner.png';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from '../../components/searchBar/SearchBar';
 
 function HomePage() {
   return (

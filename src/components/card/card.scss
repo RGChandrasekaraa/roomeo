@@ -53,5 +53,11 @@
             background-color: bisque;
             width: max-content;
         }
+
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
     }
 }
