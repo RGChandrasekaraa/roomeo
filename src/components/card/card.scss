@@ -58,6 +58,11 @@
             display: flex;
             justify-content: space-between;
             gap: 10px;
+
+            .features {
+                display: flex;
+                gap: 20px;
+            }
         }
     }
 }
