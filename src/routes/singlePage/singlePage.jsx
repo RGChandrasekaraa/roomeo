@@ -1,7 +1,7 @@
-import Slider from '../../components/slider/slider'
-import './singlePage.scss'
-import {singlePostData, userData} from "../../lib/dummyData"
-import MapComponent from '../../components/map/map'
+import "./singlePage.scss";
+import Slider from "../../components/slider/Slider";
+import Map from "../../components/map/Map";
+import { singlePostData, userData } from "../../lib/dummydata";
 
 function SinglePage() {
   return (
@@ -14,7 +14,6 @@ function SinglePage() {
               <div className="post">
                 <h1>{singlePostData.title}</h1>
                 <div className="address">
-                  {/* image of address icon */}
                   <img src="/pin.png" alt="" />
                   <span>{singlePostData.address}</span>
                 </div>
@@ -34,7 +33,6 @@ function SinglePage() {
           <p className="title">General</p>
           <div className="listVertical">
             <div className="feature">
-              {/* image of address icon */}
               <img src="/utility.png" alt="" />
               <div className="featureText">
                 <span>Utilities</span>
@@ -97,7 +95,7 @@ function SinglePage() {
           </div>
           <p className="title">Location</p>
           <div className="mapContainer">
-            <MapComponent items={[singlePostData]} />
+            <Map items={[singlePostData]} />
           </div>
           <div className="buttons">
             <button>

@@ -1,23 +1,17 @@
-import { Marker, Popup } from 'react-leaflet';
-import './pin.scss';
-import { Link } from 'react-router-dom'; // Assuming you're using react-router for navigation
+import { Marker, Popup } from "react-leaflet";
+import "./pin.scss";
+import { Link } from "react-router-dom";
 
-function Pin({ item }) {  // Correct the function parameter to receive an object `item`
-  // Validate latitude and longitude
-  if (typeof item.latitude !== 'number' || typeof item.longitude !== 'number') {
-    console.error("Invalid coordinates for item:", item);
-    return null; // Do not render the component if coordinates are invalid
-  }
-
+function Pin({ item }) {
   return (
     <Marker position={[item.latitude, item.longitude]}>
       <Popup>
         <div className="popupContainer">
-          <img src={item.img} alt={item.title} />
+          <img src={item.img} alt="" />
           <div className="textContainer">
-            <Link to={`/${item.id}`}>{item.title}</Link> {/* Corrected from <link> to <Link> */}
+            <Link to={`/${item.id}`}>{item.title}</Link>
             <span>{item.bedroom} bedroom</span>
-            <b>{item.price}</b>
+            <b>$ {item.price}</b>
           </div>
         </div>
       </Popup>
